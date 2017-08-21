@@ -29,6 +29,11 @@ html {
     white-space : normal;
     }​
 
+    #pokeDetails {
+        position: absolute;
+        padding: 40px;
+    }
+
 #pokeDetails div.pokemon{
     display: block;
     background-color: black;
@@ -42,6 +47,15 @@ html {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+}
+
+.pokeContainer{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
 }
 
 #pokeball {

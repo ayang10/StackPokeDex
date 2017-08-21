@@ -73,7 +73,7 @@ function pokeSubmit(){
                 div += '<p>Type 2: ' + pokeType2 + '</p>';
             }
 
-            div += '<p>' + pokeDescription + '</p>';
+            div += '<p>Description: ' + pokeDescription + '</p>';
             div += '</div>';
 
             $('#pokeball').hide();
