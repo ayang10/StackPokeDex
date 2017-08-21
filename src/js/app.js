@@ -24,10 +24,10 @@ function w3_close() {
 //     });
 // });
 
-
 $('#pokeball').hide();
 
-function pokeSubmit(){
+$( "#submitButton" ).click(function() {
+
     // empty the listview
     $("#pokeDetails").empty();
     $('#pokeball').show();
@@ -87,4 +87,5 @@ function pokeSubmit(){
       $('#pokeball').hide();
       $('#error').html('<div class="alert alert-warning"><strong>Warning!</strong> Error.  Not a valid entry.</div>').fadeOut(3500);
   })
-}
+
+});

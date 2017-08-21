@@ -86,6 +86,15 @@ html {
     top: 3.8em;
     left: 3.7em;
 }
+#detailcenter {
+    height: 1.5em;
+    width: 1.5em;
+    background: #222;
+    position: absolute;
+    border-radius: 50%;
+    top: 4.25em;
+    left: 4.2em;
+}
 
 @keyframes wiggle {
   0% { transform: rotate(0deg) }
