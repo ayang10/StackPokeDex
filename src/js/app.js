@@ -1,10 +1,3 @@
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
 
 // $('#submitButton').click(function (){
 // // Adding loading GIF
@@ -26,8 +19,15 @@ function w3_close() {
 
 $('#pokeball').hide();
 
-$( "#submitButton" ).click(function() {
+$( "#submitButton" ).on("click", PokeDex);
 
+$('#pokeInput').keyup(function(e) {
+    if (e.keyCode == 13) {
+      $(PokeDex);
+    }
+  })
+
+function PokeDex () {
     // empty the listview
     $("#pokeDetails").empty();
     $('#pokeball').show();
@@ -35,6 +35,11 @@ $( "#submitButton" ).click(function() {
     var pokeURL = "http://pokeapi.co/api/v1/pokemon/" + param;
     var pokeURL2 = "http://pokeapi.co/api/v2/pokemon/" + param;
 
+    if(param === '') {
+      $('#pokeball').hide();
+      $('#error').html('<div class="alert alert-warning"><strong>Warning!</strong> Error.  There was no entry.</div>').fadeOut(3500);
+    }
+    else{
     $.getJSON(pokeURL, function(data){
         //console.log(data);
         var pokeID = data.national_id;
@@ -46,6 +51,7 @@ $( "#submitButton" ).click(function() {
         else var pokeType2 = null;
         var descriptionURI = "http://pokeapi.co" + data.descriptions[0].resource_uri;
         var pokeDescription = "";
+        // console.log('hello', descriptionURI);
 
         $.getJSON(descriptionURI, function(data2){
             console.log(descriptionURI);
@@ -87,5 +93,5 @@ $( "#submitButton" ).click(function() {
       $('#pokeball').hide();
       $('#error').html('<div class="alert alert-warning"><strong>Warning!</strong> Error.  Not a valid entry.</div>').fadeOut(3500);
   })
-
-});
+    }
+}
