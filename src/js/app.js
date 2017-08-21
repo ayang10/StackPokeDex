@@ -36,7 +36,6 @@ function pokeSubmit(){
     var pokeURL2 = "http://pokeapi.co/api/v2/pokemon/" + param;
 
     $.getJSON(pokeURL, function(data){
-        console.log(data);
         //console.log(data);
         var pokeID = data.national_id;
         var pokeName = data.name;
@@ -49,14 +48,12 @@ function pokeSubmit(){
         var pokeDescription = "";
 
         $.getJSON(descriptionURI, function(data2){
-            //console.log(data2);
+            console.log(descriptionURI);
             pokeDescription = data2.description;
         });
 
         $.getJSON(pokeURL2, function(data3){
-            //console.log(data3);
-
-             //console.log(JSON.stringify(data, null, "  "));
+        
             var imageURI = data3.sprites.front_default;
 
             console.log("Number: ", pokeID);
@@ -67,14 +64,11 @@ function pokeSubmit(){
             console.log("Description: ", pokeDescription);
             console.log("Image URI: ", imageURI);
 
-            // append data to HTML
-            // empty string to hold HTML
             var div = "";
             div += '<div style="text-align: center;"><img src="' + imageURI + '" width="150" height="150">';
             div += '<h1>#' + pokeID + ' ' + pokeName + '</h1>';
             div += '<p>Type 1: ' + pokeType1 + '</p>';
 
-            // only display Type 2 if it is not null
             if (pokeType2 != null){
                 div += '<p>Type 2: ' + pokeType2 + '</p>';
             }
@@ -82,13 +76,15 @@ function pokeSubmit(){
             div += '<p>' + pokeDescription + '</p>';
             div += '</div>';
 
-            // empty the listview
             $('#pokeball').hide();
             
-            // append new li to listview
             $("#pokeDetails").append(div);
             
         });
 
-    });
+    })
+    .fail(function() {
+      $('#pokeball').hide();
+      $('#error').html('<div class="alert alert-warning"><strong>Warning!</strong> Error.  Not a valid entry.</div>').fadeOut(3500);
+  })
 }
