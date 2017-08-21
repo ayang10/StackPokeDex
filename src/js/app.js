@@ -6,13 +6,37 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
 }
 
+// $('#submitButton').click(function (){
+// // Adding loading GIF
+//  $('#content').html('<img id="loader-img" alt="" src="http://adrian-design.com/images/loading.gif" width="100" height="100" align="center" />');
+ 
+//  // Ajax Request
+//  $.ajax({
+//  type: "GET",
+//  dataType: "json",
+//  url: "https://api.github.com/users/sam",
+//   success: function (loader) {
+//  // This replace the retrieved data to the div after the setTimeOut function
+//       setTimeout(function () {
+//         $('#content').html('Hi I am ' + loader.login + '!' + 'From ' +loader.location).addClass('border');
+//             }, 3000);
+//         }
+//     });
+// });
+
+
+$('#pokeball').hide();
 
 function pokeSubmit(){
+    // empty the listview
+    $("#pokeDetails").empty();
+    $('#pokeball').show();
     var param = document.getElementById("pokeInput").value.toLowerCase();
     var pokeURL = "http://pokeapi.co/api/v1/pokemon/" + param;
     var pokeURL2 = "http://pokeapi.co/api/v2/pokemon/" + param;
 
     $.getJSON(pokeURL, function(data){
+        console.log(data);
         //console.log(data);
         var pokeID = data.national_id;
         var pokeName = data.name;
@@ -59,11 +83,11 @@ function pokeSubmit(){
             div += '</div>';
 
             // empty the listview
-            $("#pokeDetails").empty();
-
+            $('#pokeball').hide();
+            
             // append new li to listview
             $("#pokeDetails").append(div);
-
+            
         });
 
     });

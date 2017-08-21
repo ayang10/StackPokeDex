@@ -33,3 +33,51 @@ html {
     display: block;
     background-color: black;
 }
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+#pokeball {
+  width: 10em;
+  height: 10em;
+  background: #eee;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: wiggle 2s linear infinite;
+}
+
+#pokeball::before {
+    content: '';
+    background-color: #EE6767;
+    border-radius: 5em 5em 0 0;
+    width: 10em;
+    height: 4.8em;
+    position: absolute;
+    border-bottom: .4em solid #222;
+}
+
+#details {
+    height: 2.5em;
+    width: 2.5em;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 3.8em;
+    left: 3.7em;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(-30deg) }
+  50% { transform: rotate(25deg) }
+  75% {transform: rotate(0deg) }
+  100% { transform: rotate(0deg) }
+}
+
