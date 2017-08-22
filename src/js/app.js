@@ -28,6 +28,7 @@ $('#pokeInput').keyup(function(e) {
   })
 
 function PokeDex () {
+    
     // empty the listview
     $("#pokeDetails").empty();
     $('#pokeball').show();
@@ -84,7 +85,27 @@ function PokeDex () {
 
             $('#pokeball').hide();
             
-            $("#pokeDetails").append(div);
+            // $("#pokeDetails").append(div);
+
+            bootbox.dialog({
+            message: div,
+            buttons: {
+                cancel: {
+                    label: "Previous",
+                    className: 'btn-danger',
+                    callback: function(){
+                        Example.show('Custom cancel clicked');
+                    }
+                },
+                ok: {
+                    label: "Next",
+                    className: 'btn-info',
+                    callback: function(){
+                        Example.show('Custom OK clicked');
+                    }
+                }
+            }
+            });
             
         });
 

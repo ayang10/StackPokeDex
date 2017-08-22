@@ -12,6 +12,29 @@
 
 <body>
 
+  <div class="page">
+    <img class="logo" src="https://cdn.bulbagarden.net/upload/thumb/4/4b/Pok%C3%A9dex_logo.png/250px-Pok%C3%A9dex_logo.png">
+    <br><input id="pokeInput" class="search" placeholder="Search for pokemon..." title="Search" type="text"><br>
+    <div class="Bcontainer">
+      <div class="button left" id="submitButton">Poke Search</div>
+      <div class="button right">Random Search</div>
+    </div>
+  </div>
+  <div class="pokeContainer">
+    <!--<div id="pokeDetails"></div>-->
+    <div id="pokeball">
+        <div id="details"></div>
+        <div id="detailcenter"></div>
+    </div>
+    <div id="error"></div>
+</div>
+
+  <footer class="nav nav-tabs">
+    <div class="bottomone rightone">
+        Developed by A Yang
+    </div>
+  </footer>
+
 <!-- Sidebar (hidden by default) -->
 <!--<nav class="w3-sidebar w3-bar-block w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px;z-index: 9999;" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()"
@@ -28,12 +51,12 @@
   </div>
 </div>-->
   
-<div class="title" style="text-align: center; padding: 10px;">
+<!--<div class="title" style="text-align: center; padding: 10px;">
     <h1>Stack PokeDex's</h1>
-</div>
+</div>-->
 
 <!-- !PAGE CONTENT! -->
-    <div class="container">
+    <!--<div class="container">
         <div class="col-sm-8 col-sm-offset-2">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for pokemon..." id="pokeInput" />
@@ -51,7 +74,7 @@
         <div id="detailcenter"></div>
     </div>
     <div id="error"></div>
-</div>
+</div>-->
 
   <!--<hr id="about">-->
 
@@ -66,10 +89,12 @@
   </div>-->
 
 <!-- End page content -->
-
-<div class="footer"><strong>@AppleStack</strong></div>
+<!--
+<div class="footer">Developed by A Yang</div>-->
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/bootbox/bootbox.min.js"></script>
 <script type="text/javascript" src="src/js/app.js"></script>
 
 </body>

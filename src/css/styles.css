@@ -1,12 +1,12 @@
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+/*body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 
 html {
   margin: 40px auto;
-}
+}*/
 
 /* btn search details */
-.btn-search {
+/*.btn-search {
 	  background: #424242;
 	  border-radius: 0;
 	  color: #fff;
@@ -20,10 +20,10 @@ html {
 	.btn-search:active, .btn-search:hover {
 	  background: #1c1c1c;
 	  color: #fff;
-	}
+	}*/
 
 /* section footer */
-.footer {
+/*.footer {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -31,7 +31,7 @@ html {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
-}
+}*/
 
 
 /* container and pokeball details */
@@ -90,3 +90,161 @@ html {
   100% { transform: rotate(0deg) }
 }
 
+body {
+  font-size: 13px;
+}
+
+.page {
+  padding-top: 20vh;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 25vh;
+}
+
+.logo {
+  padding-bottom: 15px;
+}
+
+.search {
+  width: 45vw;
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  background-position: 98.5%;
+  background-size: 1.5em;
+  border-radius: 10px;
+}
+
+.search:hover {
+  border: 1px solid #b9b9b9;
+  border-top-color: #a0a0a0;
+}
+
+.search:focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+}
+
+.Bcontainer {
+  text-align: center;
+  margin: 0 auto;
+  width: 270px;
+  padding-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  color: #757575;
+  font-family: arial, sans-serif;
+}
+
+.button:hover {
+  border: 1px solid #c6c6c6;
+  color: #222;
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+}
+
+.nav > li > a {
+  padding: 0;
+  color: #000;
+  opacity: .75;
+}
+
+.nav > li > .colorfix {
+  opacity: 1;
+}
+
+.nav>li>a:hover,
+.nav>li>a:visited,
+.nav>li>a:focus {
+  background-color: white;
+  text-decoration: underline;
+}
+
+.nav-pills {
+  margin: 15px 5px;
+}
+
+.nav li {
+  float: right;
+  margin-right: 15px;
+}
+
+.firstsbuttons {
+  margin-top: 4.5px;
+}
+
+.btn,
+.btn:active {
+  color: white;
+  font-weight: 700;
+  background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+  padding: 4px 10.5px;
+  border: 1px solid #4285f4;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover,
+.btn:visited,
+.btn:active {
+  color: white;
+  cursor: default;
+}
+
+.nav>li>a>img {
+  opacity: .75;
+}
+
+.nav>li>a>img:hover {
+  opacity: 1;
+  cursor: default;
+}
+
+footer {
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  max-height: 40px;
+  width: 100%;
+  padding: 15px 20px 5px 10px;
+  margin-bottom: 0;
+  clear: both;
+  position:absolute;
+  bottom:0;
+}
+
+.bottomone {
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 0;
+}
+
+.bottomone li a {
+  color: #666;
+  letter-spacing: 0.2px;
+}
+
+.bottomone li {
+  margin-right: 27px;
+  list-style-type: none;
+}
+
+.leftone {
+  float: left;
+}
+
+.rightone {
+  float: right;
+  padding-right: 0;
+}
