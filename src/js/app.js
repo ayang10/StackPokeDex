@@ -17,7 +17,7 @@
 //     });
 // });
 
-$('#pokeball').hide();
+$('.pokeContainer, #pokeball').hide();
 
 $( "#submitButton" ).on("click", PokeDex);
 
@@ -31,13 +31,13 @@ function PokeDex () {
     
     // empty the listview
     $("#pokeDetails").empty();
-    $('#pokeball').show();
+    $('.pokeContainer, #pokeball').show();
     var param = document.getElementById("pokeInput").value.toLowerCase();
     var pokeURL = "http://pokeapi.co/api/v1/pokemon/" + param;
     var pokeURL2 = "http://pokeapi.co/api/v2/pokemon/" + param;
 
     if(param === '') {
-      $('#pokeball').hide();
+      $('.pokeContainer, #pokeball').hide();
       $('#error').html('<div class="alert alert-warning"><strong>Warning!</strong> Error.  There was no entry.</div>').fadeOut(3500);
     }
     else{
@@ -83,7 +83,7 @@ function PokeDex () {
             div += '<p>Description: ' + pokeDescription + '</p>';
             div += '</div>';
 
-            $('#pokeball').hide();
+            $('.pokeContainer, #pokeball').hide();
             
             // $("#pokeDetails").append(div);
 
@@ -111,7 +111,7 @@ function PokeDex () {
 
     })
     .fail(function() {
-      $('#pokeball').hide();
+      $('.pokeContainer, #pokeball').hide();
       $('#error').html('<div class="alert alert-warning"><strong>Warning!</strong> Error.  Not a valid entry.</div>').fadeOut(3500);
   })
     }
