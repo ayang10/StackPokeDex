@@ -71,7 +71,7 @@ $(document).ready(function () {
                 console.log("Image URI: ", imageURI);
 
                 var div = '';
-                div += '<div style="text-align: center;"><img src="' + imageURI + '" width="150" height="150">';
+                div += '<div style="text-align: center;"><div class="big1Background"><img src="' + imageURI + '" width="150" height="150"></div>';
                 div += '<h1>#' + pokeID + ' ' + pokeName + '</h1>';
                 div += '<p>Type 1: ' + pokeType1 + '</p>';
 

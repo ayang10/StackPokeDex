@@ -1,47 +1,19 @@
-/*body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
+body {
+  font-size: 13px;
+}
 
-html {
-  margin: 40px auto;
-}*/
-
-/* btn search details */
-/*.btn-search {
-	  background: #424242;
-	  border-radius: 0;
-	  color: #fff;
-	  border-width: 1px;
-	  border-style: solid;
-	  border-color: #1c1c1c;
-	}
-	.btn-search:link, .btn-search:visited {
-	  color: #fff;
-	}
-	.btn-search:active, .btn-search:hover {
-	  background: #1c1c1c;
-	  color: #fff;
-	}*/
-
-/* section footer */
-/*.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-}*/
-
+.big1Background {
+     background: linear-gradient(
+    to right, 
+    #ff9e2c 0%, 
+    #ff9e2c 50%, 
+    #b6701e 50%, 
+    #b6701e 100%
+  );
+}
 
 /* container and pokeball details */
 .pokeContainer{
-    /*margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) */
     margin: 0;
     position: fixed;
     width: 100%;
@@ -55,12 +27,6 @@ html {
 
 
 #pokeball {
-  /*width: 10em;
-  height: 10em;
-  background: #eee;
-  border-radius: 50%;
-  margin: 0 auto;
-  animation: wiggle 2s linear infinite;*/
     width: 10em;
     height: 10em;
     background: #eee;
@@ -68,7 +34,7 @@ html {
     margin: 0 auto;
     animation: wiggle 2s linear infinite;
     position: relative;
-    top: 50%;
+    top: 40%;
 }
 
 #pokeball::before {
@@ -106,10 +72,6 @@ html {
   50% { transform: rotate(25deg) }
   75% {transform: rotate(0deg) }
   100% { transform: rotate(0deg) }
-}
-
-body {
-  font-size: 13px;
 }
 
 .page {
