@@ -204,22 +204,6 @@ footer {
   bottom:0;
 }
 
-.bottomone {
-  display: inline-block;
-  padding: 0 10px;
-  margin-bottom: 0;
-}
-
-.bottomone li a {
-  color: #666;
-  letter-spacing: 0.2px;
-}
-
-.bottomone li {
-  margin-right: 27px;
-  list-style-type: none;
-}
-
 .leftone {
   float: left;
 }
